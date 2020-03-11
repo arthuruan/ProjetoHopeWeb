@@ -6,24 +6,13 @@ aside {
     padding: 30px 20px;
 }
 
-aside img {
-    width: 205px;
-    height: 180px;
-}
-
 aside .logo-block {
     text-align: center;
 }
 
-aside strong {
-    font-size: 20px;
-    text-align: center;
-    display: block;
-    color: #333;
-}
-
-aside form {
-    /* margin-top: 30px; */
+aside .logo-block img {
+    width: 205px;
+    height: 180px;
 }
 
 aside form .input-block {
