@@ -1,31 +1,31 @@
-aside {
+main {
     width: 320px;
     background: #FFF;
-    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
-    border-radius: 4px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
     padding: 30px 20px;
 }
 
-aside .logo-block {
+main .logo-block {
     text-align: center;
 }
 
-aside .logo-block img {
-    width: 205px;
-    height: 180px;
+main .logo-block img {
+    width: 142px;
+    height: 142px;
 }
 
-aside form .input-block {
+main form .input-block {
     margin-top: 20px;
 }
 
-aside form .input-block label {
+main form .input-block label {
     color: #ACACAC;
     font-size: 15px;
     display: block;
 }
 
-aside form .input-block input {
+main form .input-block input {
     width: 100%;
     height: 32px;
     font-size: 14px;
@@ -34,11 +34,11 @@ aside form .input-block input {
     border-bottom: 1px solid #eee;
 }
 
-aside form .forgot-block {
+main form .forgot-block {
     margin-top: 15px;
 }
 
-aside form .forgot-block a {
+main form .forgot-block a {
     margin-left: 5px;
     color: #31047ee1;
     font-size: 14px;
@@ -46,11 +46,11 @@ aside form .forgot-block a {
     transition: color 0.5s;
 }
 
-aside form .forgot-block a:hover {
+main form .forgot-block a:hover {
     color: #35038ab4;
 }
 
-aside form button[type=submit] {
+main form button[type=submit] {
     width: 100%;
     border: 0;
     margin-top: 45px;
@@ -64,21 +64,21 @@ aside form button[type=submit] {
     transition: background 0.5s;
 }
 
-aside form button[type=submit]:hover {
+main form button[type=submit]:hover {
     background: #35038ac7;
 }
 
-aside form .register-block {
+main form .register-block {
     text-align: center;
     margin-top: 25px;
 }
 
-aside form .register-block label {
+main form .register-block label {
     font-size: 14px;
     color: #666;
 }
 
-aside form .register-block a {
+main form .register-block a {
     margin-left: 5px;
     color: #31047ee1;
     font-size: 14px;
@@ -86,6 +86,6 @@ aside form .register-block a {
     transition: color 0.5s;
 }
 
-aside form .register-block a:hover {
+main form .register-block a:hover {
     color: #35038ab4;
 }

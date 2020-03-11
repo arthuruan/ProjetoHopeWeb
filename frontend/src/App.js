@@ -2,21 +2,20 @@ import React from 'react';
 
 import './global.css';
 import './App.css';
-import './Sidebar.css';
+import './Loginbar.css';
 
 import logo from './icons/logo-hope.png';
 
 function App() {
   return (
     <div id="app">
-      <aside>
+      <main>
 
           <div class="logo-block">
             <img src={logo}/>
           </div>
         
         <form>
-
 
           <div class="input-block">
             <label htmlFor="email_hope">Email</label>
@@ -41,9 +40,6 @@ function App() {
 
         </form>
 
-      </aside>
-      <main>
-        
       </main>
     </div>
   );
