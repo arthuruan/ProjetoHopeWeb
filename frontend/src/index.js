@@ -1,7 +1,8 @@
 //padrao
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import Register from './Register';
+import Auth from './Auth';
+// import Login from './Login';
+// import Register from './Register';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<Auth />, document.getElementById('root'));

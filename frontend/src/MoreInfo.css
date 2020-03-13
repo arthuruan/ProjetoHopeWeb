@@ -1,0 +1,9 @@
+#container {
+    width: 320px;
+    padding: 2px 4px;
+    margin-top: 10px;
+}
+
+.box {
+    float: left;
+}

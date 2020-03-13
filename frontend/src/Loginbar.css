@@ -1,8 +1,8 @@
-main {
+#main {
     width: 320px;
-    background: #FFF;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
     padding: 30px 20px;
 }
 
@@ -32,6 +32,7 @@ main form .input-block input {
     color: #666;
     border: 0;
     border-bottom: 1px solid #eee;
+    border-radius: 6px;
 }
 
 main form .forgot-block {
@@ -40,21 +41,21 @@ main form .forgot-block {
 
 main form .forgot-block a {
     margin-left: 5px;
-    color: #31047ee1;
+    color: #4507a1;
     font-size: 14px;
     text-decoration: none;
     transition: color 0.5s;
 }
 
 main form .forgot-block a:hover {
-    color: #35038ab4;
+    color: #4507a1;
 }
 
 main form button[type=submit] {
     width: 100%;
     border: 0;
     margin-top: 45px;
-    background: #31047ee1;
+    background: #4507a1;
     border-radius: 6px;
     padding: 12px 20px;
     font-size: 16px;
@@ -65,7 +66,7 @@ main form button[type=submit] {
 }
 
 main form button[type=submit]:hover {
-    background: #35038ac7;
+    background: #3b0986;
 }
 
 main form .register-block {
@@ -80,12 +81,12 @@ main form .register-block label {
 
 main form .register-block a {
     margin-left: 5px;
-    color: #31047ee1;
+    color: #4507a1;
     font-size: 14px;
     text-decoration: none;
     transition: color 0.5s;
 }
 
 main form .register-block a:hover {
-    color: #35038ab4;
+    color: #3b0986;
 }
