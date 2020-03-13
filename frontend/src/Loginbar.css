@@ -50,13 +50,13 @@ main form .forgot-block a {
 }
 
 main form .forgot-block a:hover {
-    color: #4507a1;
+    color: #9462e0cc;
 }
 
 main form button[type=submit] {
     width: 100%;
     border: 0;
-    margin-top: 45px;
+    margin-top: 30px;
     background: #4507a1;
     border-radius: 6px;
     padding: 12px 20px;
@@ -68,12 +68,25 @@ main form button[type=submit] {
 }
 
 main form button[type=submit]:hover {
-    background: #3b0986;
+    background: #9462e0cc;
+    color: #4507a1;
+}
+
+main .error-block {
+    margin: 10px;
+    height: 20px;
+    
+}
+
+main .error-block h1 {
+    font-size: 14px;
+    color: rgb(233, 50, 50);
+    text-align: center;
+    padding: 2px;
 }
 
 main form .register-block {
     text-align: center;
-    margin-top: 25px;
 }
 
 main form .register-block label {
@@ -90,7 +103,7 @@ main form .register-block a {
 }
 
 main form .register-block a:hover {
-    color: #3b0986;
+    color: #9462e0cc;
 }
 
 #button[type=submit] {

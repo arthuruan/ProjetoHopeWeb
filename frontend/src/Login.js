@@ -19,7 +19,8 @@ export default class Login extends Component {
     this.signup = this.signup.bind(this);
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      error: '',
     };
   }
 
@@ -28,11 +29,14 @@ export default class Login extends Component {
   }
 
   login(e) {
-    e.preventDefault();
-    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-    }).catch((error) => {
+    if(this.state.email || this.state.password) {
+      e.preventDefault();
+      fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
+      }).catch((error) => {
+        this.setState({error: 'CREDENCIAIS INVÁLIDAS!'});
         console.log(error);
-    });
+      });
+    }
   }
 
   signup(e){
@@ -44,35 +48,40 @@ export default class Login extends Component {
     });
   }
 
+
   render () {
     
     return (
       <div id="app">
         <main id="main">
   
-            <div class="logo-block">
+            <div className="logo-block">
               <img src={logo}/>
             </div>
           
           <form>
   
-            <div class="input-block">
+            <div className="input-block">
               <label htmlFor="email_hope">Email</label>
               <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email_hope"/>
             </div>
             
-            <div class="input-block">
+            <div className="input-block">
               <label htmlFor="senha_hope">Senha</label>
               <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="senha_hope"/>
             </div>
   
-            <div class="forgot-block">
+            <div className="forgot-block">
               <a href="forgot">ESQUECEU A SENHA?</a>
             </div>
   
             <button onClick={this.login} type="submit">ENTRAR</button>
+
+            <div className="error-block">
+              <h1>{this.state.error}</h1>
+            </div>              
   
-            <div class="register-block">
+            <div className="register-block">
               <label htmlFor="register_hope">NÃO POSSUI CONTA?</label>
               <a href="register">CRIAR</a>
             </div>
@@ -83,11 +92,11 @@ export default class Login extends Component {
   
         <div id="container">
   
-          <div class="box">
+          <div className="box">
             <img src={playstore}/>
           </div>
   
-          <div class="box">
+          <div className="box">
             <img src={appstore}/>
           </div>
   
