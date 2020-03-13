@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import Login from './Login';
 import Register from './Register';
 import firebase from './base';
-
-// import { Container } from './styles';
+import Home from './Home';
 
 export default class auth extends Component {
 
@@ -36,7 +35,7 @@ export default class auth extends Component {
     render() {
         return (
             <div>
-                {this.state.user ? (<Register/>) : (<Login/>)}
+                {this.state.user ? (<Home/>) : (<Login/>)}
             </div>
         );
     }

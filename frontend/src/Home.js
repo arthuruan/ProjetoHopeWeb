@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import fire from './base';
 
+import './global.css';
+import './App.css';
+import './Loginbar.css';
+
 export default class Home extends Component {
 
     constructor(props) {
@@ -15,7 +19,7 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.logout}>
+                <button id="button" onClick={this.logout} type="submit">
                     Sair
                 </button>
             </div>
