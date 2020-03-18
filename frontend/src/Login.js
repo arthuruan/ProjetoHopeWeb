@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fire from './base';
+import { Link } from 'react-router-dom';
 
 import './global.css';
 import './App.css';
@@ -83,7 +84,7 @@ export default class Login extends Component {
   
             <div className="register-block">
               <label htmlFor="register_hope">NÃO POSSUI CONTA?</label>
-              <a href="register">CRIAR</a>
+              <a href="/register">CRIAR</a>
             </div>
   
           </form>

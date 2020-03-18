@@ -2,7 +2,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Auth from './Auth';
-// import Login from './Login';
-// import Register from './Register';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-ReactDOM.render(<Auth />, document.getElementById('root'));
+import Register from './Register';
+
+ReactDOM.render(
+    <BrowserRouter>
+        <Switch>
+            <Route path="/" exact={true} component={Auth} />
+            <Route path="/register" component={Register} />
+        </Switch>
+    </BrowserRouter>
+    , document.getElementById('root'));
