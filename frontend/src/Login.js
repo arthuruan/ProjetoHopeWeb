@@ -73,7 +73,7 @@ export default class Login extends Component {
             </div>
   
             <div className="forgot-block">
-              <a href="forgot">ESQUECEU A SENHA?</a>
+              <a href="/forgot">ESQUECEU A SENHA?</a>
             </div>
   
             <button onClick={this.login} type="submit">ENTRAR</button>

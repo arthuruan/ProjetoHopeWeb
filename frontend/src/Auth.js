@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Login from './Login';
-import Register from './Register';
 import firebase from './base';
 import Home from './Home';
 
