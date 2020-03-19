@@ -1,0 +1,52 @@
+main .logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+main .logo-container img {
+    width: 142px;
+    height: 142px;
+}
+
+main .input-container label{
+    color: rgb(139, 139, 139);
+    font-size: 15px;
+    display: block;
+    padding-left: 5px;
+}
+
+main .input-container input{
+    width: 100%;
+    height: 32px;
+    font-size: 15px;
+    color: #666;
+    border: 0;
+    border-bottom: 1px solid rgb(228, 225, 225);
+    border-radius: 6px;
+    padding: 5px;
+    margin-top: 13px;
+}
+
+.buttons button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-right: 10px;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.5s;
+    border: 0;
+    background: #4507a1;
+    color: #fff;
+}
+
+.buttons button:hover {
+    background: #9462e0cc;
+    color: #4507a1;
+}
+

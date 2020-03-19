@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
-import fire from './base';
+import fire from '../base';
 
-import './global.css';
-import './App.css';
-import './Loginbar.css';
+import '../styles/global.css';
+import '../styles/App.css';
+import '../styles/Loginbar.css';
 
 export default class Home extends Component {
 
     constructor(props) {
         super(props);
         this.logout = this.logout.bind(this);
+
+        this.state = {
+            user: ''
+        };
+    }
+
+    user (){
+        const user = fire.auth().currentUser;
+        this.setState({user});
+    }
+
+    componentDidMount() {
+        this.user();
     }
 
     logout() {
@@ -19,6 +32,9 @@ export default class Home extends Component {
     render() {
         return (
             <div>
+                <h1>
+                    Ola, {this.state.user.displayName}
+                </h1>
                 <button id="button" onClick={this.logout} type="submit">
                     Sair
                 </button>

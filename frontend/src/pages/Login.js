@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import fire from './base';
-import { Link } from 'react-router-dom';
+import fire from '../base';
 
-import './global.css';
-import './App.css';
-import './Loginbar.css';
-import './MoreInfo.css';
+import '../styles/global.css';
+import '../styles/App.css';
+import '../styles/Loginbar.css';
+import '../styles/MoreInfo.css';
 
-import logo from './icons/logo-hope.png';
-import playstore from './icons/playstore.png';
-import appstore from './icons/appstore.png';
+import logo from '../icons/logo-hope.png';
+import playstore from '../icons/playstore.png';
+import appstore from '../icons/appstore.png';
 
 export default class Login extends Component {
 
@@ -17,7 +16,6 @@ export default class Login extends Component {
     super(props);
     this.login = this.login.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.signup = this.signup.bind(this);
     this.state = {
       email: '',
       password: '',
@@ -40,24 +38,17 @@ export default class Login extends Component {
     }
   }
 
-  signup(e){
-    e.preventDefault();
-    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-    }).then((u)=>{console.log(u)})
-    .catch((error) => {
-        console.log(error);
-    });
-  }
-
-
   render () {
     
     return (
       <div id="app">
         <main id="main">
   
-            <div className="logo-block">
+            <div className="logo-container">
               <img src={logo}/>
+              <font>
+                  Entrar no Project Hope
+              </font>
             </div>
           
           <form>
@@ -73,13 +64,13 @@ export default class Login extends Component {
             </div>
   
             <div className="forgot-block">
-              <a href="/forgot">ESQUECEU A SENHA?</a>
+              <a href="/forgotPassword">ESQUECEU A SENHA?</a>
             </div>
   
             <button onClick={this.login} type="submit">ENTRAR</button>
 
             <div className="error-block">
-              <h1>{this.state.error}</h1>
+              <font>{this.state.error}</font>
             </div>              
   
             <div className="register-block">

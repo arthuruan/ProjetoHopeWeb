@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Login from './Login';
-import firebase from './base';
-import Home from './Home';
+import Login from '../pages/Login';
+import fire from '../base';
+import Home from '../pages/Home';
 
 export default class auth extends Component {
 
@@ -19,8 +19,7 @@ export default class auth extends Component {
     }
 
     authListener() {
-        firebase.auth().onAuthStateChanged((user) => {
-            console.log(user);
+        fire.auth().onAuthStateChanged((user) => {
             if (user) {
                 this.setState({ user });
                 localStorage.setItem('user', user.uid);
