@@ -20,7 +20,7 @@ main .logo-container font {
     font-size: 24px;
     font-weight: 300;
     letter-spacing: -.5px;
-    color: #4507a1;
+    color: #6E6D6D;
 }
 
 main form .input-block {
@@ -40,7 +40,7 @@ main form .input-block input {
     font-size: 15px;
     color: #666;
     border: 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(192, 191, 191, 0.342);
     border-radius: 6px;
     padding: 5px;
 }

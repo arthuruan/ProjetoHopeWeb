@@ -33,7 +33,7 @@ main form .input-block input {
     font-size: 15px;
     color: #666;
     border: 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(192, 191, 191, 0.719);
 }
 
 main form button {

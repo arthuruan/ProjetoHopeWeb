@@ -15,7 +15,8 @@ export default class Login extends Component {
   constructor(props) {
     super(props);
     this.login = this.login.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.passwordChange = this.passwordChange.bind(this);
+    this.emailChange = this.emailChange.bind(this);
     this.state = {
       email: '',
       password: '',
@@ -23,8 +24,13 @@ export default class Login extends Component {
     };
   }
 
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value });
+  
+  emailChange(e) {
+    this.setState({ email: e.target.value });
+  }
+  
+  passwordChange(e) {
+    this.setState({ password: e.target.value });
   }
 
   login(e) {
@@ -47,7 +53,7 @@ export default class Login extends Component {
             <div className="logo-container">
               <img src={logo}/>
               <font>
-                  Entrar no Project Hope
+                  Project Hope
               </font>
             </div>
           
@@ -55,12 +61,24 @@ export default class Login extends Component {
   
             <div className="input-block">
               <label htmlFor="email_hope">Email</label>
-              <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email_hope"/>
+              <input 
+                value={this.state.email} 
+                onChange={this.emailChange} 
+                type="email" 
+                name="emailhope" 
+                id="email_hope"
+              />
             </div>
             
             <div className="input-block">
               <label htmlFor="senha_hope">Senha</label>
-              <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="senha_hope"/>
+              <input 
+                value={this.state.password} 
+                onChange={this.passwordChange} 
+                type="password" 
+                name="passwordhope" 
+                id="senha_hope"
+              />
             </div>
   
             <div className="forgot-block">

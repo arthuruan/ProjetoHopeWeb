@@ -10,7 +10,7 @@ export default class Forgot extends Component {
 
     constructor(props) {
         super(props);
-        this.handleChange = this.handleChange.bind(this);
+        this.emailChange = this.emailChange.bind(this);
         this.resetPassword = this.resetPassword.bind(this);
         this.state = {
           email: '',
@@ -18,8 +18,8 @@ export default class Forgot extends Component {
         };
     }
 
-    handleChange(e) {
-        this.setState({ [e.target.name]: e.target.value });
+    emailChange(e) {
+        this.setState({ email: e.target.value });
     }
 
     resetPassword(e) {
@@ -50,7 +50,13 @@ export default class Forgot extends Component {
                             enviaremos um link de redefinição de senha.
                         </label>
                         
-                        <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email_hope"/>
+                        <input 
+                            value={this.state.email} 
+                            onChange={this.emailChange} 
+                            type="email" 
+                            name="emailhope" 
+                            id="email_hope"
+                        />
                     
                     </div>
 

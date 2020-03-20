@@ -22,7 +22,7 @@ export default class auth extends Component {
         fire.auth().onAuthStateChanged((user) => {
             if (user) {
                 this.setState({ user });
-                localStorage.setItem('user', user.uid);
+                localStorage.setItem('user', user);
             } else {
                 this.setState({ user: null });
                 localStorage.removeItem('user');
@@ -30,11 +30,12 @@ export default class auth extends Component {
         });
     }
 
+    
     render() {
-        return (
-            <div>
-                {this.state.user ? (<Home/>) : (<Login/>)}
-            </div>
-        );
+        if(this.state.user) {
+            return <Home/>;
+        } else {
+            return <Login/>;
+        }
     }
 }

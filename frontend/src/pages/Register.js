@@ -14,11 +14,12 @@ export default class Register extends Component {
     constructor(props) {
         super(props);
         this.handleChange = this.handleChange.bind(this);
+        this.emailChange = this.emailChange.bind(this);
         this.signup = this.signup.bind(this);
         this.state = {
           email: '',
           password: '',
-          displayName: '',
+          displayNamee: '',
           user: null,
           error: null,
         };
@@ -28,20 +29,22 @@ export default class Register extends Component {
         this.setState({ [e.target.name]: e.target.value });
     }
 
+    emailChange(e) {
+        this.setState({ email: e.target.value });
+    }
+
     signup = async (e) => {
-        if(this.state.displayName && this.state.email && this.state.password){
+        if(this.state.displayNamee && this.state.email && this.state.password){
             try {
                 e.preventDefault();
                 const userCredentials = await fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password);
-                if (userCredentials.user) {
-                    console.log(userCredentials.user);
-                    await userCredentials.user.updateProfile({
-                        displayName: this.state.displayName,
-                    });
-                }
+                console.log(userCredentials.user);
+                await userCredentials.user.updateProfile({
+                    displayName: this.state.displayNamee,
+                });
             } catch (error) {
                 console.log(error);
-                this.setState({error: 'Email já existe ou está mal formatado!'});
+                this.setState({error: error.message});
             }
         }
     }
@@ -62,17 +65,35 @@ export default class Register extends Component {
     
                         <div className="input-block">
                             <label htmlFor="nome_hope">Nome</label>
-                            <input value={this.state.displayName} onChange={this.handleChange} type="displayName" name="displayName" id="displayName_hope"/>
+                            <input 
+                                value={this.state.displayName} 
+                                onChange={this.handleChange} 
+                                type="Name" 
+                                name="displayNamee" 
+                                id="displayName_hope"
+                            />
                         </div>
     
                         <div className="input-block">
                             <label htmlFor="email_hope">Email</label>
-                            <input value={this.state.email} onChange={this.handleChange} type="email" name="email" id="email_hope"/>
+                            <input 
+                                value={this.state.email} 
+                                onChange={this.emailChange} 
+                                type="email" 
+                                name="emailhope" 
+                                id="email_hope"
+                            />
                         </div>
     
                         <div className="input-block">
                             <label htmlFor="senha_hope">Senha</label>
-                            <input value={this.state.password} onChange={this.handleChange} type="password" name="password" id="senha_hope"/>
+                            <input 
+                                value={this.state.password} 
+                                onChange={this.handleChange} 
+                                type="password" 
+                                name="password" 
+                                id="senha_hope"
+                            />
                         </div>
 
                         <div className="error-block">

@@ -1,19 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import fire from '../base';
+import api from '../services/api';
 
-import '../styles/global.css';
+// import '../styles/global.css';
 import '../styles/App.css';
-import '../styles/Loginbar.css';
-
+import '../styles/Home.css';
 export default class Home extends Component {
 
     constructor(props) {
         super(props);
         this.logout = this.logout.bind(this);
-
         this.state = {
-            user: ''
+            user: '',
+            cards: null,
         };
+    }
+
+    readCards = async () => {
+        const response = await api.get('/');
+        const cards = response.data.cards;
+
+        this.setState({cards});
+        console.log(this.state.cards);
     }
 
     user (){
@@ -23,6 +31,7 @@ export default class Home extends Component {
 
     componentDidMount() {
         this.user();
+        this.readCards();
     }
 
     logout() {
@@ -31,13 +40,25 @@ export default class Home extends Component {
 
     render() {
         return (
-            <div>
-                <h1>
-                    Ola, {this.state.user.displayName}
-                </h1>
-                <button id="button" onClick={this.logout} type="submit">
-                    Sair
-                </button>
+            <div className="container-row">
+                <aside>
+                    <h1>
+                        Ola, { this.state.user && this.state.user.displayName }
+                    </h1>
+                    <button id="button" onClick={this.logout} type="submit">
+                        Sair
+                    </button>
+                </aside>
+                <div className="maincards">
+                    <ul>
+                        {this.state.cards && this.state.cards.map(card => (
+                            <li className="card">
+                                <header>{card.title}</header>
+                                <p>{card.description}</p>
+                            </li> 
+                        ))}
+                    </ul>
+                </div>
             </div>
         );
     }
