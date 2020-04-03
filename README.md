@@ -1,2 +1,2 @@
 # ProjetoHopeWeb
-estudo de react, node e firebase
+react, node and firebase study
